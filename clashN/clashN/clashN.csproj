@@ -39,7 +39,7 @@
         </EmbeddedResource>
         <EmbeddedResource Include="Sample\SampleMixin.yaml" />
         <EmbeddedResource Include="Sample\SampleTun.yaml" />
-        <ProjectReference Include="..\..\..\v2rayN\v2rayN\PacLib\PacLib.csproj" />
+        <EmbeddedResource Include="Resources\pac.txt" LogicalName="ClashN.Resources.pac.txt" />
         <Resource Include="ClashN.ico">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Resource> 

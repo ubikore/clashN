@@ -33,20 +33,4 @@ A clash client for Windows, supports [Mihomo core](https://github.com/MetaCubeX/
 
 ### Contribute
 
-To build this project, you should clone both [ClashN](https://github.com/2dust/clashN) and [v2rayN](https://github.com/2dust/v2rayN) to the same folder
-```
-Example folder
-├─ ClashN
-|  ├─ clashN
-|  |  ├─ clashN.sln
-|  |  └─ ...
-|  ├─ README.md
-|  └─ ...
-├─ v2rayN
-|  ├─ v2rayN
-|  |  ├─ v2rayN.sln
-|  |  └─ ...
-|  ├─ README.md
-|  └─ ...
-└─ ...
-```
+Clone this repository and build `clashN/clashN.sln`. The PAC implementation and default PAC template are included in ClashN, so a separate v2rayN checkout is not required.

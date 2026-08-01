@@ -185,21 +185,6 @@
                         </StackPanel>
                     </TabItem.Header>
                 </TabItem>
-                <TabItem x:Name="promotionTabItem" Style="{StaticResource MyMaterialDesignNavigationRailTabItem}">
-                    <TabItem.Header>
-                        <StackPanel Width="auto" Height="auto">
-                            <materialDesign:PackIcon
-                                Width="24"
-                                Height="24"
-                                HorizontalAlignment="Center"
-                                Kind="VolumeHigh" />
-                            <TextBlock
-                                HorizontalAlignment="Center"
-                                Style="{StaticResource TabItemTitle}"
-                                Text="{x:Static resx:ResUI.TbPromotion}" />
-                        </StackPanel>
-                    </TabItem.Header>
-                </TabItem>
             </TabControl>
 
             <tb:TaskbarIcon

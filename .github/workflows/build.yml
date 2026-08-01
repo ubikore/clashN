@@ -17,13 +17,6 @@ jobs:
         with:
           path: clashN
 
-      - name: Checkout v2rayN for PacLib
-        uses: actions/checkout@v4
-        with:
-          repository: 2dust/v2rayN
-          ref: 6.60
-          path: v2rayN
-
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
