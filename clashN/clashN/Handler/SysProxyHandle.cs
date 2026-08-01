@@ -76,9 +76,12 @@ namespace ClashN.Handler
                 }
                 else if (type == SysProxyType.Pac)
                 {
-                    PacHandler.Start(Utils.GetConfigPath(), port, config.PacPort);
-                    var strProxy = $"{Global.httpProtocol}{Global.Loopback}:{config.PacPort}/pac?t={DateTime.Now.Ticks}";
-                    SetIEProxy(false, strProxy, "");
+                    PacHandler.Start(
+                        Utils.GetConfigPath(),
+                        port,
+                        config.PacPort,
+                        () => RefreshPacProxy(config.PacPort));
+                    RefreshPacProxy(config.PacPort);
                 }
 
                 if (type != SysProxyType.Pac)
@@ -91,6 +94,12 @@ namespace ClashN.Handler
                 Utils.SaveLog(ex.Message, ex);
             }
             return true;
+        }
+
+        private static void RefreshPacProxy(int pacPort)
+        {
+            var pacUrl = $"{Global.httpProtocol}{Global.Loopback}:{pacPort}/pac?t={DateTime.Now.Ticks}";
+            SetIEProxy(false, pacUrl, "");
         }
 
         public static void ResetIEProxy4WindowsShutDown()
